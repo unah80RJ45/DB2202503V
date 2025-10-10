@@ -15,7 +15,7 @@ alter table Alumno add Direccion varchar(50)
 
 alter view vAlumnoCarrera
 as
-	select a.AlumnoID, a.Nombre, a.CarreraID, a.Promedio, c.Nombre NombreCarrera
+	select a.AlumnoID, a.Nombre, a.CarreraID, a.Direccion, c.Nombre NombreCarrera, c.Director 
 	from Alumno as a
 	inner join Carrera c on a.CarreraID = c.CarreraID
 go
